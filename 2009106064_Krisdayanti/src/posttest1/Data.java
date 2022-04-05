@@ -10,10 +10,6 @@ package posttest1;
  */
 
 public class Data {
-    String nama_pemesan;
-    String alamat;
-    String email;
-    String merch;
-    String grup;
+    String nama_pemesan, alamat, email, merch, grup;
     int jumlah;
 }
