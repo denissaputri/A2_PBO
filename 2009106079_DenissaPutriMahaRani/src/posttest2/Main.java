@@ -111,7 +111,6 @@ public class Main {
                         System.out.println("===============***================");
                         System.out.println("         INFO TAMBAHAN KSR        ");
                         System.out.println("          KOTA SAMARINDA          ");
-                        System.out.println("          (Constructor)           ");
                         System.out.println("===============***================");
                         System.out.println(" ");
                         System.out.println("Nama KSR        : " + ksrunmul.nama);
