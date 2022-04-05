@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Posttest1;
+package posttest2;
 import java.util.ArrayList; 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -102,6 +102,7 @@ static ArrayList<Data> data = new ArrayList<Data>();
         buatdata.namacalonwakilkepaladaerah = input3;
         buatdata.nomorurut = input4;
         data.add(buatdata);
+        
     }
     public static void updateData()throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -142,18 +143,8 @@ static ArrayList<Data> data = new ArrayList<Data>();
         inputd = Integer.parseInt(br.readLine());
         int indexd = inputd-1;
         
+        data.get(indexd).hapus();
         data.remove(indexd);
-    }
-
-    private static class Data {
-
-        private String partai;
-        private String namacalonkepaladaerah;
-        private String namacalonwakilkepaladaerah;
-        private int nomorurut;
-
-        public Data() {
-        }
     }
 
     }
