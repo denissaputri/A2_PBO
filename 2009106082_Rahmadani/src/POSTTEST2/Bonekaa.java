@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package POSTTEST1;
+package POSTTEST2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Asus
  */
-public class Boneka {
+public class Bonekaa {
     static Scanner inputint = new Scanner(System.in);
     static Scanner inputstr = new Scanner(System.in);
     static ArrayList  stok_boneka = new ArrayList<>();
