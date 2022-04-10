@@ -1,8 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package posttest1pbo;
+package posttest2;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -10,72 +10,11 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Iterator;
 
-class Posttest1 {
-    public int jumlah_hewan;
-    public int jumlah_hari;
-    public int harga;
-    public int jam;
-    public float umur_hewan;
-    public float nomor_telepon;
-    public String nama_hewan;
-    public String nama_pemilik;
-    public String jenis_hewan;
-    
-    Posttest1 (int jumlah_hewan, int jumlah_hari, 
-            int harga, int jam, float umur_hewan, float nomor_telepon, 
-            String nama_hewan, String nama_pemilik, String jenis_hewan) {
-        
-        this.jumlah_hewan = jumlah_hewan;
-        this.jumlah_hari = jumlah_hari;
-        this.harga = harga;
-        this.jam = jam;
-        this.umur_hewan = umur_hewan;
-        this.nomor_telepon = nomor_telepon;
-        this.nama_hewan = nama_hewan;
-        this.nama_pemilik = nama_pemilik;
-        this.jenis_hewan = jenis_hewan;
-    }
-    
-    public int getjumlah_hewan() {
-        return jumlah_hewan; }
-    
-    public int getjumlah_hari() {
-        return jumlah_hari; }
-    
-    public int getharga() {
-        return harga; }
-    
-    public int getjam() {
-        return jam; }
-    
-    public float getumur_hewan() {
-        return umur_hewan; }
-    
-    public float getnomor_telepon() {
-        return nomor_telepon; }
-    
-    public String getnama_hewan() {
-        return nama_hewan; }
-    
-    public String getnama_pemilik() {
-        return nama_pemilik; }
-    
-    public String getjenis_hewan() {
-        return jenis_hewan; }
-    
-    public String toString() {
-        return nomor_telepon+ " " +nama_pemilik+ " " +jenis_hewan+
-                " " +nama_hewan+ " " +jumlah_hewan+ " " +umur_hewan+ 
-                " " +jumlah_hari+ " " +jam+ " " +harga;
-    }
-    
-}
-
-public class Posttest1PBO {
+public class posttest2 {
     public static void main(String[] args) {
-        List<Posttest1> daftar = new ArrayList<Posttest1>();
+        ArrayList<Penitipan> titip = new ArrayList<Penitipan>();
         Scanner input_bil = new Scanner(System.in);
-        Scanner input_data = new Scanner (System.in);
+        Scanner input_data = new Scanner(System.in);
         int pilihan;
         
         Scanner waitForKeypress = new Scanner(System.in);
@@ -98,56 +37,56 @@ public class Posttest1PBO {
             
             switch(pilihan) {    
                 case 1:
-                    System.out.println("__________________________________________");
-                    System.out.println("| Data Hewan Peliharaan                   |");
-                    System.out.println("|_________________________________________|");
-                    Iterator<Posttest1>i = daftar.iterator();
+                    System.out.println("    __________________________________________");
+                    System.out.println("    |           Data Hewan Peliharaan         |");
+                    System.out.println("    |_________________________________________|");
+                    Iterator<Penitipan>i = titip.iterator();
                     
-                    for(Posttest1 R : daftar) {
+                    for(Penitipan R : titip) {
                         System.out.println(" ");
-                        System.out.println("Nomor Telepon : " + R.getnomor_telepon());
-                        System.out.println("Nama Pemilik : " + R.getnama_pemilik());
-                        System.out.println("Jenis Hewan : " + R.getjenis_hewan());
-                        System.out.println("Nama Hewan : " + R.getnama_hewan());
-                        System.out.println("Jumlah Hewan : " + R.getjumlah_hewan());
-                        System.out.println("Umur Hewan : " + R.getumur_hewan());
-                        System.out.println("Jumlah Hari : " + R.getjumlah_hari());
-                        System.out.println("Waktu : " + R.getjam());
-                        System.out.println("Harga : " + R.getharga());
+                        System.out.println("    Nomor Telepon : " + R.nomor_telepon);
+                        System.out.println("    Nama Pemilik : " + R.nama_pemilik);
+                        System.out.println("    Jenis Hewan : " + R.jenis_hewan);
+                        System.out.println("    Nama Hewan : " + R.nama_hewan);
+                        System.out.println("    Jumlah Hewan : " + R.jumlah_hewan);
+                        System.out.println("    Umur Hewan : " + R.umur_hewan);
+                        System.out.println("    Jumlah Hari : " + R.jumlah_hari);
+                        System.out.println("    Waktu : " + R.jam);
+                        System.out.println("    Harga : " + R.harga);
                     }
                     
-                    System.out.print("    \nTekan Enter Untuk Melanjutkan...");
+                    System.out.print("\n    Tekan Enter Untuk Melanjutkan...");
                     waitForKeypress.nextLine();
                     
                 break;
                 
                     
                 case 2:
-                    System.out.print(" Menambahkan Data Hewan Peliharaan ");
-                    System.out.print("Masukkan Nomor Telepon : ");
-                    float nomor_telepon = input_bil.nextFloat();
-                    System.out.print("Masukkan Nama Pemilik : ");
+                    System.out.println("    Menambahkan Data Hewan Peliharaan ");
+                    System.out.print("    Masukkan Nomor Telepon : ");
+                    int nomor_telepon = input_bil.nextInt();
+                    System.out.print("    Masukkan Nama Pemilik : ");
                     String nama_pemilik = input_data.nextLine();
-                    System.out.print("Masukkan Jenis Hewan : ");
+                    System.out.print("    Masukkan Jenis Hewan : ");
                     String jenis_hewan = input_data.nextLine();
-                    System.out.print("Masukkan Nama Hewan : ");
+                    System.out.print("    Masukkan Nama Hewan : ");
                     String nama_hewan = input_data.nextLine();
-                    System.out.print("Masukkan Jumlah Hewan : ");
+                    System.out.print("    Masukkan Jumlah Hewan : ");
                     int jumlah_hewan = input_bil.nextInt();
-                    System.out.print("Masukkan Umur Hewan : ");
-                    float umur_hewan = input_bil.nextFloat();
-                    System.out.print("Masukkan Jumlah Hari : ");
+                    System.out.print("    Masukkan Umur Hewan : ");
+                    int umur_hewan = input_bil.nextInt();
+                    System.out.print("    Masukkan Jumlah Hari : ");
                     int jumlah_hari = input_bil.nextInt();
-                    System.out.print("Masukkan Jumlah Jam : ");
+                    System.out.print("    Masukkan Jumlah Jam : ");
                     int jam = input_bil.nextInt();
-                    System.out.println("Masukkan Harga : ");
+                    System.out.print("    Masukkan Harga : ");
                     int harga = input_bil.nextInt();
                     
-                    daftar.add(new Posttest1(jumlah_hewan, jumlah_hari, 
+                    titip.add(new Penitipan(jumlah_hewan, jumlah_hari, 
                             harga, jam, umur_hewan, nomor_telepon, nama_hewan, 
                             nama_pemilik, jenis_hewan));
                     
-                    System.out.print("    \nTekan Enter Untuk Melanjutkan...");
+                    System.out.print("\n    Tekan Enter Untuk Melanjutkan...");
                     waitForKeypress.nextLine();
                     
                 break;
@@ -156,11 +95,11 @@ public class Posttest1PBO {
                     boolean found = false;
                         System.out.println("    Mencari Data Hewan Peliharaan ");
                         System.out.print("    Masukkan Nomor Telepon : ");
-                        nomor_telepon = input_bil.nextFloat();
-                        i = daftar.iterator();
+                        nomor_telepon = input_bil.nextInt();
+                        i = titip.iterator();
                     while(i.hasNext()) {
-                        Posttest1 a = i.next();
-                        if(a.getnomor_telepon() == nomor_telepon) {
+                        Penitipan a = i.next();
+                        if(a.nomor_telepon == nomor_telepon) {
                             System.out.println(a);
                             found = true;
                         }
@@ -171,17 +110,18 @@ public class Posttest1PBO {
                     }
                     
                     System.out.println("    Data Tidak Ditemukan");
+                    
                 break;
                 
                 case 3:
                     found = false;
                     System.out.println("    Menghapus Data Hewan Peliharaan");
                     System.out.print("    Masukkan Nomor Telepon : ");
-                    nomor_telepon = input_bil.nextFloat();
-                    i = daftar.iterator();
+                    nomor_telepon = input_bil.nextInt();
+                    i = titip.iterator();
                     while(i.hasNext()) {
-                        Posttest1 a = i.next();
-                        if(a.getnomor_telepon() == nomor_telepon) {
+                        Penitipan a = i.next();
+                        if(a.nomor_telepon == nomor_telepon) {
                             i.remove();
                             found = true;
                         }
@@ -193,7 +133,7 @@ public class Posttest1PBO {
                     
                     System.out.println("    Data Berhasil Di Hapus");
                     
-                    System.out.print("    \nTekan Enter Untuk Melanjutkan...");
+                    System.out.print("\n    Tekan Enter Untuk Melanjutkan...");
                     waitForKeypress.nextLine();
                     
                 break;
@@ -202,14 +142,14 @@ public class Posttest1PBO {
                     found = false;
                     System.out.println("    Update Data Hewan Peliharaan");
                     System.out.print("    Masukkan Nomor Telepon : ");
-                    nomor_telepon = input_bil.nextFloat();
+                    nomor_telepon = input_bil.nextInt();
                     
-                    ListIterator<Posttest1>rs = daftar.listIterator();
+                    ListIterator<Penitipan>rs = titip.listIterator();
                     while(rs.hasNext()) {
-                        Posttest1 a = rs.next();
-                        if(a.getnomor_telepon() == nomor_telepon) {
+                        Penitipan a = rs.next();
+                        if(a.nomor_telepon == nomor_telepon) {
                             System.out.print("    Masukkan Nomor Telepon Baru : ");
-                            nomor_telepon = input_bil.nextFloat();
+                            nomor_telepon = input_bil.nextInt();
                             System.out.print("    Masukkan Nama Pemilik Baru : ");
                             nama_pemilik = input_data.nextLine();
                             System.out.print("    Masukkan Jenis Hewan Baru : ");
@@ -219,7 +159,7 @@ public class Posttest1PBO {
                             System.out.print("    Masukkan Jumlah Hewan Baru : ");
                             jumlah_hewan = input_bil.nextInt();
                             System.out.print("    Masukkan Umur Hewan Baru : ");
-                            umur_hewan = input_bil.nextFloat();
+                            umur_hewan = input_bil.nextInt();
                             System.out.print("    Masukkan Jumlah Hari Baru : ");
                             jumlah_hari = input_bil.nextInt();
                             System.out.print("    Masukkan Jumlah Jam Baru : ");
@@ -227,7 +167,7 @@ public class Posttest1PBO {
                             System.out.print("    Masukkan Harga Baru: ");
                             harga = input_bil.nextInt();
                             
-                            rs.set(new Posttest1(jumlah_hewan, jumlah_hari, 
+                            rs.set(new Penitipan(jumlah_hewan, jumlah_hari, 
                             harga, jam, umur_hewan, nomor_telepon, nama_hewan, 
                             nama_pemilik, jenis_hewan));
                             
@@ -241,19 +181,17 @@ public class Posttest1PBO {
                         System.out.println("    Data Telah Berhasil Di Update!!");
                     }
                     
-                    System.out.print("    \nTekan Enter Untuk Melanjutkan...");
+                    System.out.print("\n    Tekan Enter Untuk Melanjutkan...");
                     waitForKeypress.nextLine();
                     
                 break;
                 
                 case 9:
-                    System.out.println("    ----- THANK YOU ----- ");
+                    System.out.println("        ----- THANK YOU ----- ");
                     System.exit(0);
                 break;
             }
         } 
         while (pilihan != 0);
-        
     }
-    
 }
