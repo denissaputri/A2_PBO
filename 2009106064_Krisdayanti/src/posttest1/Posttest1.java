@@ -17,7 +17,7 @@ public class Posttest1 {
 
     static InputStreamReader input = new InputStreamReader(System.in);
     static BufferedReader input1 = new BufferedReader(input);
-    static ArrayList<Data> list = new ArrayList<>();
+    static ArrayList<Data> data = new ArrayList<>();
     
     static void dian() throws IOException{
         System.out.println("+------------------------------------+");
@@ -89,24 +89,24 @@ public class Posttest1 {
         System.out.print("Jumlah Pesanan \t : ");
         createdata.jumlah = Integer.parseInt(input1.readLine());
         System.out.println(" ");
-        list.add(createdata);
+        data.add(createdata);
     }
     
     static void showData(){
         System.out.println(" ");
         System.out.println("          Pesanan");
         
-        if(list.isEmpty()){
+        if(data.isEmpty()){
             System.out.println("\nTidak ada pesanan\n");
         }else{
-            for(int i = 0; i < list.size(); i++){
+            for(int i = 0; i < data.size(); i++){
                 System.out.println("Nomor Pesanan \t : " + (i + 1));
-                System.out.println("Nama Pesanan \t : " + list.get(i).nama_pemesan);
-                System.out.println("Alamat Pemesan \t : " + list.get(i).alamat);
-                System.out.println("Email Pemesan \t : " + list.get(i).email);
-                System.out.println("Merchandise \t : " + list.get(i).merch);
-                System.out.println("Idol Group \t : " + list.get(i).grup);
-                System.out.println("Jumlah Pesanan \t : " + list.get(i).jumlah);
+                System.out.println("Nama Pesanan \t : " + data.get(i).nama_pemesan);
+                System.out.println("Alamat Pemesan \t : " + data.get(i).alamat);
+                System.out.println("Email Pemesan \t : " + data.get(i).email);
+                System.out.println("Merchandise \t : " + data.get(i).merch);
+                System.out.println("Idol Group \t : " + data.get(i).grup);
+                System.out.println("Jumlah Pesanan \t : " + data.get(i).jumlah);
                 System.out.println(" ");
             }
         }
@@ -125,22 +125,22 @@ public class Posttest1 {
         pilih--;
         
         System.out.print("Nama Pemesan \t : ");
-        list.get(pilih).nama_pemesan = input1.readLine();
+        data.get(pilih).nama_pemesan = input1.readLine();
         
         System.out.print("Alamat Pemesan \t : ");
-        list.get(pilih).alamat = input1.readLine();
+        data.get(pilih).alamat = input1.readLine();
         
         System.out.print("Alamat Email \t : ");
-        list.get(pilih).email = input1.readLine();
+        data.get(pilih).email = input1.readLine();
         
         System.out.print("Merchandise \t : ");
-        list.get(pilih).merch = input1.readLine();
+        data.get(pilih).merch = input1.readLine();
         
         System.out.print("Idol Group \t : ");
-        list.get(pilih).grup = input1.readLine();
+        data.get(pilih).grup = input1.readLine();
         
         System.out.print("Jumlah Pemesan \t : ");
-        list.get(pilih).jumlah = Integer.parseInt(input1.readLine());
+        data.get(pilih).jumlah = Integer.parseInt(input1.readLine());
         System.out.println(" ");
     }
     
@@ -156,7 +156,7 @@ public class Posttest1 {
         pilih = Integer.parseInt(input1.readLine());
         pilih--;
         
-        list.remove(pilih);
+        data.remove(pilih);
     }
     
     public static void main(String[] args) throws IOException{
