@@ -1,4 +1,4 @@
-package Posttest1;
+package Posttest2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,16 +17,7 @@ public class Main {
             menu();
         }
     }
-    private static class Menu {
-        private float ID;
-        private String Seri;
-        private String Nama;
-        private int Regular;
-        private int Large;
-
-        public Menu() {
-        }
-    }
+    
     public static void menu()throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("\n=============================================");
@@ -86,6 +77,10 @@ public class Main {
         membuatmenu.Regular = input4;
         membuatmenu.Large   = input5;
         Menu.add(membuatmenu);
+        
+        for (int i = 0; i < Menu.size(); i += 1) {
+            Menu.get(i).input();
+        }
     }
     public static void Tampilkan()throws IOException{
         System.out.println("\n=============================================");
@@ -133,6 +128,10 @@ public class Main {
         Menu.get(indexe).Regular = input4;
         Menu.get(indexe).Large   = input5;
         
+        for (int i = 0; i < Menu.size(); i += 1) {
+            Menu.get(i).edit();
+        }
+        
         Tampilkan();
     }
     public static void Hapus()throws IOException {
@@ -149,6 +148,9 @@ public class Main {
         
         int indexd      = inputhapus-1;
         Menu.remove(indexd);
+        for (int i = 0; i < Menu.size(); i += 1) {
+            Menu.get(i).delete();
+        }
         
         Tampilkan();
     }
