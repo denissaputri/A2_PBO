@@ -1,19 +1,19 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-
 package posttest1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
 /**
  *
  * @author ASUS
  */
-public class Posttest_1 {
+public class Posttest1 {
 
     static InputStreamReader input = new InputStreamReader(System.in);
     static BufferedReader input1 = new BufferedReader(input);
@@ -166,4 +166,5 @@ public class Posttest_1 {
             menu();
         }
     }
+    
 }
