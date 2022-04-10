@@ -1,62 +1,23 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package postest1;
+package postest2;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Scanner;
-
+import postest2.toko;
+ 
 /**
  *
  * @author Hp
  */
-
-class Toko{
-   public int Id;
-   public int Jum;
-   public String jenis;
-   public String Barang;
-   public int harga;
-
-   Toko(int Id,int Jum, String jenis, String Barang, int harga){
-      this.Id = Id;
-      this.Jum = Jum;
-      this.jenis = jenis;
-      this.Barang = Barang;
-      this.harga = harga;
-   }
-   public int getId(){
-      return Id;
-   }
-   public int getjumlah(){
-      return Jum;
-   }
-   public int getHarga(){
-      return harga;
-   }
-   public String getJenis(){
-      return jenis;
-   }
-   public String getBarang(){
-      return Barang;
-   }
-
-
-   public String toString(){
-      return Id+" "+Jum+" "+jenis+" "+Barang+" "+harga;
-   }
-}
-public class Postest1 {
-
-    /**
-     * @param args the command line arguments
-     */
+public class barangtoko {
     public static void main(String[] args) {
-      List<Toko> brg = new ArrayList<Toko>();
+      List<toko> brg = new ArrayList<toko>();
       Scanner s = new Scanner(System.in);
       Scanner s1 = new Scanner(System.in);
       int pilih;
@@ -81,27 +42,27 @@ public class Postest1 {
                System.out.println("+-----------------------------------------------------------+");
                System.out.println("Masukkan ID Barang          : "); int no = s.nextInt();
                System.out.println("Masukkan Jumlah Barang      : "); int jum = s.nextInt();
-               System.out.println("Masukkan Nama Barang Barang : "); String Barang = s1.nextLine();
+               System.out.println("Masukkan Nama Barang        : "); String Barang = s1.nextLine();
                System.out.println("Masukkan Jenis Barang       : "); String Jenis = s1.nextLine();
                System.out.println("Masukkan harga Barang       : "); int harga = s.nextInt();
                System.out.println("-----------------------------------------------------------");
 
-               brg.add(new Toko(no,jum,Barang,Jenis,harga));
+               brg.add(new toko(no,jum,Barang,Jenis,harga));
             break;
 
             case 2:
                System.out.println("+-----------------------------------------------------------+");
                System.out.println("|---------      Barang Yang Tersedia Di Toko        --------|");
                System.out.println("+-----------------------------------------------------------+");
-               Iterator<Toko> i = brg.iterator();
+               Iterator<toko> i = brg.iterator();
                
-               for (Toko M : brg) {
+               for (toko M : brg) {
                    System.out.println(" ");
-                   System.out.println("\tID         : " + M.getId());
-                   System.out.println("\tJumlah     : " + M.getjumlah());
-                   System.out.println("\tbarang     : " + M.getBarang());
-                   System.out.println("\tJenis      : " + M.getJenis());
-                   System.out.println("\tHarga      : " + M.getHarga());
+                   System.out.println("\tID         : " + M.setId());
+                   System.out.println("\tJumlah     : " + M.setjumlah());
+                   System.out.println("\tbarang     : " + M.setBarang());
+                   System.out.println("\tJenis      : " + M.setJenis());
+                   System.out.println("\tHarga      : " + M.setHarga());
                }
                System.out.println("+----------------------------------------------------------+");
             break;
@@ -112,13 +73,13 @@ public class Postest1 {
                System.out.println("+-----------------------------------------------------------+");
                System.out.println("|---------      Barang Yang Tersedia Di Toko        --------|");
                System.out.println("+-----------------------------------------------------------+");               
-               for (Toko M : brg) {
+               for (toko M : brg) {
                    System.out.println(" ");
-                   System.out.println("\tID         : " + M.getId());
-                   System.out.println("\tJumlah     : " + M.getjumlah());
-                   System.out.println("\tbarang     : " + M.getBarang());
-                   System.out.println("\tJenis      : " + M.getJenis());
-                   System.out.println("\tHarga      : " + M.getHarga());
+                   System.out.println("\tID         : " + M.setId());
+                   System.out.println("\tJumlah     : " + M.setjumlah());
+                   System.out.println("\tbarang     : " + M.setBarang());
+                   System.out.println("\tJenis      : " + M.setJenis());
+                   System.out.println("\tHarga      : " + M.setHarga());
                  }
                     System.out.println("+----------------------------------------------------------+");
                 boolean found = false;
@@ -128,8 +89,8 @@ public class Postest1 {
                int Id = s.nextInt();
                 i = brg.iterator();
                while(i.hasNext()){
-                  Toko e = i.next();
-                  if(e.getId() == Id)  {
+                  toko e = i.next();
+                  if(e.setId() == Id)  {
                      i.remove();
                      found = true;
                   }
@@ -151,13 +112,13 @@ public class Postest1 {
                System.out.println("|---------      Barang Yang Tersedia Di Toko        --------|");
                System.out.println("+-----------------------------------------------------------+");
                
-               for (Toko M : brg) {
+               for (toko M : brg) {
                    System.out.println(" ");
-                   System.out.println("\tID         : " + M.getId());
-                   System.out.println("\tJumlah     : " + M.getjumlah());
-                   System.out.println("\tbarang     : " + M.getBarang());
-                   System.out.println("\tJenis      : " + M.getJenis());
-                   System.out.println("\tHarga      : " + M.getHarga());
+                   System.out.println("\tID         : " + M.setId());
+                   System.out.println("\tJumlah     : " + M.setjumlah());
+                   System.out.println("\tbarang     : " + M.setBarang());
+                   System.out.println("\tJenis      : " + M.setJenis());
+                   System.out.println("\tHarga      : " + M.setHarga());
                }
                System.out.println("+----------------------------------------------------------+");
                found = false;
@@ -167,10 +128,10 @@ public class Postest1 {
                System.out.println("+-----------------------------------------------------------+");
                Id = s.nextInt();
                
-               ListIterator<Toko>li = brg.listIterator();
+               ListIterator<toko>li = brg.listIterator();
                while(li.hasNext()){
-                  Toko e = li.next();
-                  if(e.getId() == Id)  {
+                  toko e = li.next();
+                  if(e.setId() == Id)  {
                      System.out.println("+------------------------------------------------------------+");
                      System.out.println("         Masukkan ID data Barang yang ingin diupdate :       |");
                      System.out.println("+------------------------------------------------------------+");
@@ -179,7 +140,7 @@ public class Postest1 {
                      System.out.println("Masukkan Jumlah Baru         : ");jum = s1.nextInt();
                      System.out.println("Masukkan Harga Baru          : ");harga = s.nextInt();
                      System.out.println("+-----------------------------------------------------------+");                     
-                     li.set(new Toko(Id,jum,Barang,Jenis,harga));
+                     li.set(new toko(Id,jum,Barang,Jenis,harga));
                      found = true;
                   }
                }
@@ -196,8 +157,7 @@ public class Postest1 {
                
             break;
             
-            
-            case 6:
+            case 5:
               System.out.println("+--------------------------------------------------------------+");
               System.out.println("                  Program Selesai Terima Kasih!!!              |");
               System.out.println("+--------------------------------------------------------------+");
@@ -209,5 +169,4 @@ public class Postest1 {
       }while(pilih!=5);
         
     }
-    
 }
