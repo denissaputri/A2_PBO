@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Posttest2;
-
+package Posttest3;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
 /**
  *
- * @author GEFORCE_i5
+ * @author VITARACOM
  */
 public class main {
     static ArrayList<kayu> kayu = new ArrayList<kayu>();
@@ -25,14 +25,14 @@ public class main {
        InputStreamReader home = new InputStreamReader(System.in);
        BufferedReader input = new BufferedReader(home);
             System.out.println("");
-            System.out.println("**TOKO LEMARI MEUBEL**");
-            System.out.println("*****************");
+            System.out.println("*****TOKO LEMARI MEUBEL*****");
+            System.out.println("***************************************************");
             System.out.println("1. Masukkan Data Lemari");
             System.out.println("2. Lihat Data Lemari"); 
             System.out.println("3. Ubah Data Lemari");
             System.out.println("4. Hapus Data Lemari");
             System.out.println("5. EXIT");
-            System.out.println("*****************");
+            System.out.println("***************************************************");
             System.out.println("Pilih angka 1-5 = ");
         int pilih = Integer.valueOf(input.readLine());
             switch (pilih){
@@ -132,8 +132,4 @@ public static void backmenu() throws IOException{
     menu();
     }
 
-
-
-}
-
-    
+} 
