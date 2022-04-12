@@ -70,7 +70,7 @@ public class Fungsi {
     static void addOrder() throws IOException{
         System.out.println("\n       Membuat Pesanan");
         
-        System.out.print("Tanggal Pemesanan (DD/MM/YY): ");
+        System.out.print("\nTanggal Pemesanan (DD/MM/YY): ");
         String tanggal = input1.readLine();
         System.out.print("Nama Pemesan \t : ");
         String nama = input1.readLine();      
@@ -101,7 +101,7 @@ public class Fungsi {
         }
         else{
             for(int i = 0; i < dataOrder.size(); i += 1){
-                System.out.println("Pesanan ke-" + (i + 1));
+                System.out.println("\nPesanan ke-" + (i + 1));
 //                System.out.println("Tanggal Pemesanan (DD/MM/YY): " + dataOrder.get(i).getTanggal());
 //                System.out.println("Nama Pemesan \t : " + dataOrder.get(i).getNama());
 //                System.out.println("Alamat Pemesan \t : " + dataOrder.get(i).getAlamat());
@@ -115,18 +115,17 @@ public class Fungsi {
         }
     }
     
+    
     static void updateOrder() throws IOException{        
         System.out.println("\n        Update Pesanan");
         
         int pilih;
         
-        showOrder();
-        
-        System.out.print("Input nama pemesan : ");
+        System.out.print("\nInput nama pemesan : ");
         String edit = input1.readLine();
         for (Order order : dataOrder) {
             if (order.getNama().equals(edit)) {
-                System.out.print("Tanggal Pemesanan (DD/MM/YY): ");
+                System.out.print("\nTanggal Pemesanan (DD/MM/YY): ");
                 order.setTanggal(input1.readLine());
                 System.out.print("Nama Pemesan \t : ");
                 order.setNama(input1.readLine());
@@ -144,6 +143,11 @@ public class Fungsi {
                 System.out.println("\nData telah diperbarui.\n");
                 break;
             }
+            else{
+                System.out.println("\nMaaf, data tidak ada!\n");
+                
+                updateOrder();
+            }
         }
     }
     
@@ -152,9 +156,7 @@ public class Fungsi {
         
         int pilih;
         
-        showOrder();
-        
-        System.out.print("Input nama pemesan : ");
+        System.out.print("\nInput nama pemesan : ");
         String nama = input1.readLine();
         for (int i = 0; i < dataOrder.size(); i++) {
             if (dataOrder.get(i).getNama().equals(nama)) {
@@ -162,11 +164,16 @@ public class Fungsi {
                 System.out.println("\nData berhasil dihapus\n");
                 break;
             }
+            else{
+                System.out.println("\nMaaf, data tidak ada!\n");
+                
+                deleteOrder();
+            }
         }   
     }
     
     static void keluar() {
-        System.out.println("\nBye~\n");
+        System.out.println("\nThank You. Bye~\n");
         System.exit(0);
     }
     

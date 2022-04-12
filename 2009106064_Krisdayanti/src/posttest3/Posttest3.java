@@ -21,7 +21,7 @@ public class Posttest3 {
 
     public static void main(String[] args) throws IOException{
          
-       Fungsi.dian();
+        Fungsi.dian();
         
         while(true){
             Fungsi.menu();
