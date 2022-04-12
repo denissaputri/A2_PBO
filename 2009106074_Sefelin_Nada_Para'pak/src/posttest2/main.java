@@ -131,6 +131,7 @@ static ArrayList<Data> data = new ArrayList<Data>();
         data.get(indexe).namacalonkepaladaerah = input2;
         data.get(indexe).namacalonwakilkepaladaerah = input3;
         data.get(indexe).nomorurut = input4;
+        data.get(indexe).ubah();
     }
     public static void deleteData()throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
