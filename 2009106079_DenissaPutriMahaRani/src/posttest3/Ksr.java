@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package posttest2;
+package posttest3;
 
 
 public class Ksr {
-    String nama, asal, alamat, naungan;
-    int tahun, jumlah;
+    private String nama, asal, alamat, naungan;
+    private int tahun, jumlah;
     
     public Ksr(String nama,  String asal, String alamat, int jumlah, int tahun, String naungan) {
         this.nama = nama;
@@ -18,10 +18,6 @@ public class Ksr {
         this.naungan = naungan;
     }
     
-    Ksr(){
-        
-    }
-    
     public void tampil(){
         System.out.println("Nama KSR            : " + this.nama);
         System.out.println("Asal instansi       : " + this.asal);
@@ -30,6 +26,11 @@ public class Ksr {
         System.out.println("Tahun berdiri       : " + this.tahun);
         System.out.println("Naungan PMI (y/t)   : " + this.naungan);
     }
+    
+    Ksr() {
+
+    
+}
     
     public void setNama(String nama) {
         this.nama = nama;
@@ -55,12 +56,12 @@ public class Ksr {
         this.naungan = naungan;
     }
     
-    public void sendiri() {
-        System.out.println("tidak berada dibawah naungan PMI.");
+    public void ada() {
+        System.out.println("Data KSR yang berada di kota Samarinda.");
     }
 
-    public void bwhnaungan() {
-        System.out.println("berada dibawah naungan PMI.");
+    public void tdkada() {
+        System.out.println("KSR tidak terdaftar di kota Samarinda.");
     }
 
     
