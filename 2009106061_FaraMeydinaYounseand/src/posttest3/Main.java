@@ -1,4 +1,4 @@
-package posttest2;
+package posttest3;
 
 //import java.io.BufferedReader;
 //import java.io.IOException;
@@ -64,7 +64,7 @@ public class Main {
                     System.out.print("Masukkan Nama peserta : ");
                     String name = input.readLine();
                     for (Dapes peserta : dataPeserta) {
-                        if (peserta.nama.equals(name)) {
+                        if (peserta.getnama().equals(name)) {
                             System.out.print("NIK         : ");peserta.setnik(Integer.parseInt(input.readLine()));
                             System.out.print("Nama        : ");peserta.setnama(input.readLine());
                             System.out.print("Gender      : ");peserta.setgender(input.readLine());
@@ -79,7 +79,7 @@ public class Main {
                     System.out.print("Masukkan Nama peserta : ");
                     String nam = input.readLine();
                     for (int i = 0; i < dataPeserta.size(); i++) {
-                        if (dataPeserta.get(i).nama.equals(nam)) {
+                        if (dataPeserta.get(i).getnama().equals(nam)) {
                             dataPeserta.remove(i);
                             break;
                         }
