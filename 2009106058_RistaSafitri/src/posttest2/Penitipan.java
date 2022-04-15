@@ -19,8 +19,8 @@ public class Penitipan {
     String nama_pemilik;
     String jenis_hewan;
     
-    Penitipan(int harga, int jumlah_hewan, int jumlah_hari, int jam, int nomor_telepon,
-            int umur_hewan, String nama_hewan, String nama_pemilik, String jenis_hewan) {
+    Penitipan(int nomor_telepon, String nama_pemilik, String jenis_hewan, String nama_hewan, 
+            int jumlah_hewan, int umur_hewan, int jumlah_hari, int jam, int harga) {
         this.harga = harga;
         this.jumlah_hewan = jumlah_hewan;
         this.jumlah_hari = jumlah_hari;

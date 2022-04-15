@@ -82,9 +82,9 @@ public class posttest2 {
                     System.out.print("    Masukkan Harga : ");
                     int harga = input_bil.nextInt();
                     
-                    titip.add(new Penitipan(jumlah_hewan, jumlah_hari, 
-                            harga, jam, umur_hewan, nomor_telepon, nama_hewan, 
-                            nama_pemilik, jenis_hewan));
+                    titip.add(new Penitipan(nomor_telepon, nama_pemilik, jenis_hewan,
+                            nama_hewan, jumlah_hewan, umur_hewan, jumlah_hari, 
+                            jam, harga));
                     
                     System.out.print("\n    Tekan Enter Untuk Melanjutkan...");
                     waitForKeypress.nextLine();
@@ -167,9 +167,9 @@ public class posttest2 {
                             System.out.print("    Masukkan Harga Baru: ");
                             harga = input_bil.nextInt();
                             
-                            rs.set(new Penitipan(jumlah_hewan, jumlah_hari, 
-                            harga, jam, umur_hewan, nomor_telepon, nama_hewan, 
-                            nama_pemilik, jenis_hewan));
+                            rs.set(new Penitipan(nomor_telepon, nama_pemilik, jenis_hewan,
+                            nama_hewan, jumlah_hewan, umur_hewan, jumlah_hari, 
+                            jam, harga));
                             
                             found = true;
                         }
