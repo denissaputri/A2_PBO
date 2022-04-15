@@ -9,6 +9,7 @@ package posttest2;
  * @author ASUS
  */
 public class Order {
+    
     String nama, alamat, email, merch, grup;
     int jumlah;
 
@@ -21,7 +22,7 @@ public class Order {
         this.jumlah = jumlah;
     }
 
-    void done() {
+    void done(){
         System.out.println("\nPesanan telah dicatat.\n");
     }
     

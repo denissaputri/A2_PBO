@@ -47,16 +47,16 @@ public class Posttest2 {
     }
     
     static void menu() throws IOException{
-        System.out.println("+-------------------------+");
-        System.out.println("Pemesanan Merchandise KPOP");
-        System.out.println("+-------------------------+");
-        System.out.println("|         M E N U         |");
-        System.out.println("| [1] Tambah Pesanan      |");
-        System.out.println("| [2] Lihat Pesanan       |");
-        System.out.println("| [3] Update Data Pesanan |");
-        System.out.println("| [4] Hapus Pesanan       |");
-        System.out.println("| [0] Keluar              |");
-        System.out.println("+-------------------------+");
+        System.out.println("+----------------------------+");
+        System.out.println("| Pemesanan Merchandise KPOP |");
+        System.out.println("+----------------------------+");
+        System.out.println("|         M E N U            |");
+        System.out.println("| [1] Tambah Pesanan         |");
+        System.out.println("| [2] Lihat Pesanan          |");
+        System.out.println("| [3] Update Data Pesanan    |");
+        System.out.println("| [4] Hapus Pesanan          |");
+        System.out.println("| [0] Keluar                 |");
+        System.out.println("+----------------------------+");
         System.out.print("Pilih Menu : ");
                     
         int pilih = Integer.valueOf(input1.readLine());
@@ -72,7 +72,7 @@ public class Posttest2 {
     }
     
     static void addOrder() throws IOException{
-        System.out.println("\n          Membuat Pesanan");
+        System.out.println("\n       Membuat Pesanan");
         
         System.out.print("Nama Pemesan   : ");
         String nama = input1.readLine();      
@@ -96,10 +96,10 @@ public class Posttest2 {
     }
     
     static void showOrder(){
-        System.out.println("\n          Pesanan");
+        System.out.println("\n           Pesanan");
         
         if(dataOrder.isEmpty()){
-            System.out.println("\nTidak ada pesanan!\n");
+        System.out.println("\n      Tidak ada pesanan!\n");
         }else{
             for(int i = 0; i < dataOrder.size(); i++){
                 System.out.println("Nomor Pesanan \t : " + (i + 1));
@@ -115,7 +115,7 @@ public class Posttest2 {
     }
     
     static void updateOrder() throws IOException{        
-        System.out.println("\n          Update Pesanan");
+        System.out.println("\n        Update Pesanan");
         
         int pilih;
         
@@ -155,13 +155,11 @@ public class Posttest2 {
         
         dataOrder.remove(pilih);
         System.out.println("\nData berhasil dihapus\n");
-        
-        showOrder();
     }
     
     public static void main(String[] args) throws IOException{
-        
-        dian();
+         
+       dian();
         
         while(true){
             menu();
