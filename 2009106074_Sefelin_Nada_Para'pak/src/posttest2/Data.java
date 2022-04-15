@@ -16,9 +16,6 @@ public class Data {
     String namacalonwakilkepaladaerah;
     int nomorurut;
     
-    void buat(){
-        System.out.println("Berhasil menambahkan");
-    }
     void ubah(){
         System.out.println("Berhasil mengupdate");
     }
