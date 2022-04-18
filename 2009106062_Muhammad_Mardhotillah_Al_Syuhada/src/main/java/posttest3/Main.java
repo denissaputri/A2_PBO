@@ -92,8 +92,7 @@ Perbaikan buatdaftarbaru = new Perbaikan (merklaptop, tipelaptop, jenisperbaikan
 public static void lihatdaftar()throws IOException{
             for(int i = 0 ; i < perbaikan.size();i++){
                 System.out.println("=====================================================");
-                System.out.println("[List Daftar ke-]");
-                System.out.println(i+1);
+                System.out.println("List Daftar ke- " +(i+1));
                 System.out.println("Merk Laptop     : " + perbaikan.get(i).getMerklaptop());
                 System.out.println("Tipe Laptop     : " + perbaikan.get(i).getTipelaptop());
                 System.out.println("Jenis Perbaikan : " + perbaikan.get(i).getJenisperbaikan());
