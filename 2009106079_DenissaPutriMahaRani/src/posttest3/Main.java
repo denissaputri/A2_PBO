@@ -91,8 +91,6 @@ public class Main {
                                 ksr.setAlamat(input.next());
                                 System.out.print("Masukkan jumlah anggota  : ");
                                 ksr.setJumlah(input.nextInt());
-                                System.out.print("Masukkan tahun berdiri   : ");
-                                ksr.setTahun(input.nextInt());
                                 System.out.print("Dibawah naungan PMI(y/t) : ");
                                 ksr.setNaungan(input.next());
                                 break;
