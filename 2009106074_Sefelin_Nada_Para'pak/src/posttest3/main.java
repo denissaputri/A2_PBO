@@ -54,7 +54,7 @@ public class main {
                     break;
                 case 3:
                     System.out.println("|*************Merubah Data*************|");
-                    System.out.print("| Masukkan namacalonwakilkepaladaerah :   ");
+                    System.out.print("| Masukkan namacalonwakilkepaladaerah : ");
                     String nomor = input.readLine();
                     for (calon calon : datacalon) {
                         if (calon.getpartai().equals(nomor)) {
