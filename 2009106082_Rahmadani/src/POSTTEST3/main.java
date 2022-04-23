@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package POSTTEST3;
 
 import java.io.BufferedReader;
@@ -37,7 +32,7 @@ public class main {
             
             switch (menu) {
                 case 1:
-                    System.out.println("-----------------TAMBAH-----------------------");
+                    System.out.println("-----------------TAMBAH------------------------------");
                     System.out.print("--- Jenis --- : ");
                     String jenis = input.readLine();
                     System.out.print("--- Warna --- : ");
@@ -46,7 +41,7 @@ public class main {
                     String size = input.readLine();
                     System.out.print("--- Stok ---  : ");
                     int stok = Integer.parseInt(input.readLine());
-                    System.out.println("----------------------------------------------");
+                    System.out.println("-----------------------------------------------------");
                     
                     boneka dataBaru = new boneka(jenis, warna, size, stok);
                     databoneka.add(dataBaru);
@@ -58,10 +53,10 @@ public class main {
                     break;
                     
                 case 2:
-                    System.out.println("---------------------LIHAT----------------------");
+                    System.out.println("---------------------LIHAT---------------------------");
                     for (int i = 0; i < databoneka.size(); i += 1) {
                         System.out.println("| Boneka ke-" + (i + 1));
-                        System.out.println("---------------------------------------------");
+                        System.out.println("-------------------------------------------------");
                         databoneka.get(i).display();
                     }
                 
