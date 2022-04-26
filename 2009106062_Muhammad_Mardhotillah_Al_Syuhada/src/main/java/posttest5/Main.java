@@ -1,4 +1,4 @@
-package posttest4;
+package posttest5;
 
 import java.util.ArrayList;
 import java.io.BufferedReader;
@@ -47,7 +47,7 @@ public class Main {
                 String hargaperbaikan = input.readLine();
                 System.out.println("Masukan sistem operasi : ");
                 String os = input.readLine();
-                        dataLaptop.add(new Laptop(merk, tipe, jenisperbaikan, hargaperbaikan, os));
+                dataLaptop.add(new Laptop(merk, tipe, jenisperbaikan, hargaperbaikan, os));
             } else if (pilihan ==2) {
                 System.out.println("Masukan merk : ");
                 merk = input.readLine();
