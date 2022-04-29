@@ -1,4 +1,4 @@
-package posttest4;
+package posttest5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -115,7 +115,7 @@ public class main{
             System.out.println("| No.\ttipe\tModel\tUkuran\tWarna\tJumlah\t  |");
             for(int i = 0; i < listbaju.size(); i++){
                 System.out.print("| " + (i + 1) + "\t");
-                System.out.print(listbaju.get(i).tipe + "\t");
+                System.out.print(listbaju.get(i).tipeb + "\t");
                 System.out.print(listbaju.get(i).getmodel() + "\t");
                 System.out.print(listbaju.get(i).getukuran() + "\t");
                 System.out.print(listbaju.get(i).getwarna() + "\t");
@@ -134,7 +134,7 @@ public class main{
             System.out.println("| No.\ttipe\tModel\tUkuran\tWarna\tJumlah\t  |");
             for(int i = 0; i < listjaket.size(); i++){
                 System.out.print("| " + (i + 1) + "\t");
-                System.out.print(listjaket.get(i).tipe + "\t");
+                System.out.print(listjaket.get(i).tipej + "\t");
                 System.out.print(listjaket.get(i).getmodel() + "\t");
                 System.out.print(listjaket.get(i).getukuran() + "\t");
                 System.out.print(listjaket.get(i).getwarna() + "\t");
@@ -161,6 +161,7 @@ public class main{
                 System.out.print("| Pilih Nomor Pesanan : ");
                 select = Integer.parseInt(input.readLine());
                 select--;
+                
                 System.out.print("| Model : ");
                 listbaju.get(select).setmodel(input.readLine());
                 System.out.print("| Ukuran : ");
