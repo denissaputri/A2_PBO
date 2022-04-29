@@ -27,6 +27,9 @@ public class barang extends Toko {
         System.out.println("Jumlah Produk : " + this.Jum);
         System.out.println("Harga Produk  : " + this.harga);
 }
+    public void ukuran(){
+    System.out.println("Jenis Produk" + this.jenis+"berukuran M");
+}
 
    public void setharga(int harga){
       this.harga= harga;
